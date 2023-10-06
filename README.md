@@ -36,5 +36,20 @@ var peopleObjs = people.map((nombre)=> {
     }
 });
 
+products = [
+    { name: 'zapas', price: 20},
+    { name: 'shirt', price: 40},
+    { name: 'jeans', price: 30},
+    { name: 'gloves', price: 12},
+];
+
+productsIVA = products.map((p) => {
+    return {
+        ...p,                   //spread Operator, crea una copia del objeto
+        iva: p.price/21,
+        baseImp: p.price - p.price/21 
+    }
+});
+
 ```
 
